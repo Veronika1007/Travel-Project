@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Add On Project</title>
+    <style>
+      body {
+        background: #eac7c7;
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      img {
+        transition: all 150ms ease-in-out;
+        border-radius: 20px;
+      }
+
+      img:hover {
+        transform: scale(1.4);
+        filter: opacity(90%);
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 25px;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      .container {
+        background: white;
+        margin: 10px auto;
+        padding: 20px;
+        max-width: 800px;
+        text-align: center;
+        border-radius: 25px;
+      }
+      .intro-picture {
+        width: 500px;
+        height: 400px;
+      }
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+      }
+      .grid img {
+        width: 100%;
+        height: 150px;
+      }
+      .grid img:hover {
+        transform: scale(2);
+      }
+      .booking {
+        display: block;
+        margin: 0 auto;
+        color: #460c68;
+        border-radius: 15px;
+        padding: 10px;
+        transition: all 300ms ease-in-out;
+      }
+      .booking:hover {
+        background: #460c68;
+        color: white;
+      }
+      .darkModeButton {
+        background: #460c68;
+        color: white;
+        border-radius: 15px;
+        padding: 10px;
+        transition: all 300ms ease-in-out;
+      }
+      .darkModeButton:hover {
+        background: white;
+        color: #460c68;
+      }
+      .dark {
+        background: #460c68;
+        color: #eac7c7;
+      }
+
+      .dark .container {
+        background: #460c68;
+      }
+      .dark .darkModeButton {
+        background: white;
+        color: #460c68;
+        border-radius: 15px;
+        padding: 10px;
+        transition: all 300ms ease-in-out;
+      }
+      .dark .booking:hover {
+        background: #460c68;
+        color: white;
+        border-color: white;
+        border-width: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="darkModeButton">Dark Mode</button>
+    <div class="container">
+      <h1>My favorite hobby is</h1>
+      <h2>TRAVELLING</h2>
+      <p>
+        The dictionary definition of hobby is 'an activity someone does for
+        pleasure when they are not working'.
+      </p>
+      <p>
+        So if you travel for pleasure whilst you are away from one, you can
+        absolutely consider your travel as a hobby.
+      </p>
+      <p>
+        Travel gives us our greatest stories, our most cherished memories and
+        countless irreplaceable learnings that we can choose to pay forward to
+        others. It teaches us about ourselves and each other, it broadens our
+        horizons and, just like a reset button, it forces us to refocus on what
+        really matters.
+      </p>
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/004/929/112/non_2x/travel-background-design-let-s-go-travel-around-the-world-text-in-blue-empty-space-with-traveler-elements-for-international-adventure-trip-illustration-vector.jpg"
+        alt=""
+        class="intro-picture"
+      />
+      <div class="grid">
+        <img
+          src="https://assets.stickermule.com/image/fetch/c_lfill,fl_lossy,f_auto,h_360,q_auto:best,w_660/https%3A%2F%2Fstorage.googleapis.com%2Fsm-content%2Fcore%2Fproducts%2FproductAliases%2Ftravel-stickers%2Fgallery_1"
+          alt=""
+        />
+        <img
+          src="https://trackthattravel.com/images/0.56451300-1521198021Travelling.jpg"
+          alt=""
+        />
+        <img
+          src="https://www.savoredjourneys.com/wp-content/uploads/2015/05/benefits-seeing-world.jpg"
+          alt=""
+        />
+        <img
+          src="https://www.su.edu/wp-content/uploads/2015/11/8014511335_59f73c0d82_b.jpg"
+          alt=""
+        />
+      </div>
+      <h3>Benefits of travelling</h3>
+      <ul>
+        <li>Understanding different cultures</li>
+        <li>Trying new foods</li>
+        <li>Seeing amazing places</li>
+        <li>Meeting new people</li>
+        <li>Learning a new language</li>
+        <li>Self-reflection</li>
+        <li>Learn about yourself</li>
+        <li>Accomplishment</li>
+        <li>Becoming comfortable being uncomfortable</li>
+        <li>Re-appreciate your own country</li>
+      </ul>
+      <a
+        href="https://www.booking.com/index.en-gb.html?label=gen173nr-1BCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQGIAgGoAgO4ApOVgp4GwAIB0gIkNmMwNDdkNGItNmJjMy00Mzc0LTkxZTYtNzJhNTg4ZDlmMDhi2AIF4AIB&sid=f6b234f68e5969b8a48bc1be499dddca&keep_landing=1&sb_price_type=total&"
+        target="_blank"
+      >
+        <button class="booking">Book you next trip</button></a
+      >
+    </div>
+    <footer>Coded by Veronika</footer>
+    <script>
+      function changeColour() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let darkButton = document.querySelector(".darkModeButton");
+      darkButton.addEventListener("click", changeColour);
+    </script>
+  </body>
+</html>
